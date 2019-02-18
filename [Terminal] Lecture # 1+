@@ -1,0 +1,108 @@
+Last login: Wed Feb 13 19:24:34 on ttys001
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.new_file.txt.swp
+
+nothing added to commit but untracked files present (use "git add" to track)
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git add new_file.txt
+fatal: pathspec 'new_file.txt' did not match any files
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls -a
+.			..			.git			.new_file.txt.swp
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git commit -m "created a new file"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.new_file.txt.swp
+
+nothing added to commit but untracked files present
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls -a
+.			..			.git			.new_file.txt.swp
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git commit -m "created a new file"
+On branch master
+
+Initial commit
+
+Untracked files:
+	.new_file.txt.swp
+
+nothing added to commit but untracked files present
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git remote add git-demo https://github.com/jhyoo9703/git-demo.githttps://github.com/jhyoo9703/git-demo.git
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git push git-demo master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/jhyoo9703/git-demo.githttps://github.com/jhyoo9703/git-demo.git'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=git-demo/<branch> master
+
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git pull git-demo master
+remote: Not Found
+fatal: repository 'https://github.com/jhyoo9703/git-demo.githttps://github.com/jhyoo9703/git-demo.git/' not found
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls -a
+.			..			.git			.new_file.txt.swp
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git remote add orgin https://github.com/jhyoo9703/git-demo.git
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git push orgin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/jhyoo9703/git-demo.git'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git pull orgin master
+Username for 'https://github.com': jhyoo9703
+Password for 'https://jhyoo9703@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jhyoo9703/git-demo.git/'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git pull orgin master
+Username for 'https://github.com': jhyoo9703
+Password for 'https://jhyoo9703@github.com': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/jhyoo9703/git-demo
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> orgin/master
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ ls -a
+.			..			.git			.new_file.txt.swp	README.md
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git log
+commit cf7739ce014b4eccf6aae39d35bf0477e2a90791 (HEAD -> master, orgin/master)
+Author: jhyoo9703 <47619872+jhyoo9703@users.noreply.github.com>
+Date:   Wed Feb 13 19:50:30 2019 -0800
+
+    Initial commit
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git show HEAD~4
+fatal: ambiguous argument 'HEAD~4': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git show HEAD~24
+fatal: ambiguous argument 'HEAD~24': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git show HEAD~2
+fatal: ambiguous argument 'HEAD~2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.new_file.txt.swp
+	[Terminal] Lecture # 1
+
+nothing added to commit but untracked files present (use "git add" to track)
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ git reset cf7739ce014b4eccf6aae39d35bf0477e2a90791
+yujeonghun-ui-MacBook-Pro:git-demo JeongHoonYoo$ 
